@@ -1127,6 +1127,21 @@
             </div>
         </div>
     </footer>
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+        <div class="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500); // Attend que la transition soit terminée
+        });
+    </script>
+
     <script id="mobileMenuScript">
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobileMenuButton');
